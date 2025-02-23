@@ -9,6 +9,7 @@
                         <x-application-logo2 class="block h-10 w-auto fill-current text-gray-600" />
                     </a>
                 </div>
+                
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -16,8 +17,33 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-            </div>
 
+                {{-- @if (Auth::check() && Auth::user()->role == 'admin')
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
+                            {{ __('Admin') }}
+                        </x-nav-link>
+                    </div>
+                @endif
+                
+                @if (Auth::check() && Auth::user()->role == 'prestatario')
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('prestatario.dashboard')" :active="request()->routeIs('prestatario.dashboard')">
+                            {{ __('Prestatario') }}
+                        </x-nav-link>
+                    </div>
+                @endif
+                
+                @if (Auth::check() && Auth::user()->role == 'prestamista')
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('prestamista.dashboard')" :active="request()->routeIs('prestamista.dashboard')">
+                            {{ __('Prestamista') }}
+                        </x-nav-link>
+                    </div>
+                @endif --}}
+
+            
+            </div>
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
