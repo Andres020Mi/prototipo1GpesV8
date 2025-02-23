@@ -16,28 +16,28 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'name' => 'Admin User',
-                'email' => 'admin@example.com',
+                'email' => 'admin@gmail.com',
                 'password' => Hash::make('password123'),
                 'role' => 'admin', // 🔹 Rol de administrador
                 'email_verified_at' => now(),
             ],
             [
                 'name' => 'Prestamista User',
-                'email' => 'prestamista@example.com',
+                'email' => 'prestamista@gmail.com',
                 'password' => Hash::make('password123'),
                 'role' => 'prestamista', // 🔹 Rol de prestamista
                 'email_verified_at' => now(),
             ],
             [
                 'name' => 'Cuentadante User',
-                'email' => 'cuentadante@example.com',
+                'email' => 'cuentadante@gmail.com',
                 'password' => Hash::make('password123'),
                 'role' => 'cuentadante', // 🔹 Rol de cuentadante
                 'email_verified_at' => now(),
             ],
             [
                 'name' => 'Prestatario User',
-                'email' => 'prestatario@example.com',
+                'email' => 'prestatario@gmail.com',
                 'password' => Hash::make('password123'),
                 'role' => 'prestatario', // 🔹 Rol de prestatario
                 'email_verified_at' => now(),
